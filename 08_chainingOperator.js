@@ -15,7 +15,14 @@
  * doit renvoyer "admin"
  * 
  */
+let obj = {
+      name: "John",
+        group: {
+          name: "admin"
+        }
+      }
 
-const getGroupName = (obj) => {}
+const getGroupName = (obj) => obj?.group?.name;
+console.log(getGroupName(obj));
 
 module.exports = {getGroupName};

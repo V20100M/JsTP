@@ -5,13 +5,14 @@
  * utilisez new Promise
  */
 
-const sleep = (ms) => {
-    return new Promise((resolve, reject) => {
+const sleep = () => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve();
-        }, ms)
+        }, 2000)
     })
 };
-sleep(2000);
+console.log("start");
+sleep().then((à => console.log("finito")));
 
 module.exports = {sleep};
